@@ -75,4 +75,22 @@ pub fn test_get_number_with_new_base(){
     expected_result = 23;
     result = sum_base::get_number_with_new_base(num, 6);
     assert_eq!(result, expected_result);
+
+    num = 42;
+    expected_result = 110;
+    result = sum_base::get_number_with_new_base(num, 6);
+    assert_eq!(result, expected_result);
+
+    num = 10;
+    expected_result = 10;
+    result = sum_base::get_number_with_new_base(num, 10);
+    assert_eq!(result, expected_result);
+}
+
+#[test]
+pub fn test_sum_base(){
+    let num : i32 = 42;
+    let result : i32 = sum_base::sum_base(num, 6);
+    let expected_result : i32 = 2;
+    assert_eq!(result, expected_result);
 }
