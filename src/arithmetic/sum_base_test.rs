@@ -3,26 +3,6 @@
 use super::sum_base;
 
 #[test]
-pub fn test_get_decimal_jump(){
-    let mut result : i32 = sum_base::get_decimal_jump(3, 1);
-    let mut expected_result : i32 = 91;
-    assert_eq!(result, expected_result);
-    result = sum_base::get_decimal_jump(3, 2);
-    expected_result *= 2;
-    assert_eq!(result, expected_result);
-}
-
-#[test]
-pub fn test_get_number_before_decimal_jump(){
-    let mut result : i32 = sum_base::get_number_before_decimal_jump(3, 1);
-    let mut expected_result : i32 = 9;
-    assert_eq!(result, expected_result);
-    result = sum_base::get_number_before_decimal_jump(3, 2);
-    expected_result = 18;
-    assert_eq!(result, expected_result);
-}
-
-#[test]
 pub fn test_sum_digits(){
     let num : i32 = 23;
     let result : i32 = sum_base::sum_digits(num);
@@ -63,7 +43,7 @@ pub fn test_get_number_with_new_base(){
 
     num = 27;
     result = sum_base::get_number_with_new_base(num, 3);
-    expected_result = 300;
+    expected_result = 1000;
     assert_eq!(result, expected_result);
 
     num = 6;
@@ -84,6 +64,11 @@ pub fn test_get_number_with_new_base(){
     num = 10;
     expected_result = 10;
     result = sum_base::get_number_with_new_base(num, 10);
+    assert_eq!(result, expected_result);
+
+    num = 8;
+    result = sum_base::get_number_with_new_base(num, 2);
+    expected_result = 1000;
     assert_eq!(result, expected_result);
 }
 
