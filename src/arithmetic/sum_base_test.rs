@@ -1,6 +1,7 @@
 #[cfg(test)]
 
 use super::sum_base;
+
 #[test]
 pub fn test_sum_base(){
     let mut num : i32 = 8;
